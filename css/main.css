@@ -1,0 +1,498 @@
+/* START MAIN RULES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 50px 515px auto auto auto auto;
+}
+.container::after{
+    content: "";
+    height: 100%;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+}
+/* END MAIN RULES */
+
+/* START HEADER */
+.header{
+    position:fixed;
+    z-index: 100;
+    width: 100%;
+    height: 50px;
+    background-color: #111111;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /* display: grid;
+    grid-template-columns: 10% 10%;
+    grid-column-gap: 80%; */
+    /* or grid-column: 1 / 3 means start at 1 and end at 3 */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .brand{
+    margin-left: 20px;
+}
+.header .brand a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+}
+.header .nav{
+    margin-right: 20px;
+    cursor: pointer;
+    color: #888888;
+
+}
+.header .nav:hover{
+    color: #fff;
+    transition: 0.3s;
+
+}
+.header .nav i span{
+    margin-left: 7px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+/* END BANNER */
+
+/* START BANNER */
+.banner{
+    grid-column: 1 / 4;
+    grid-row: 2 /3;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(17,17,17,255);
+}
+.banner .overlap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.banner .video{
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+}
+.banner .video video{
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+}
+.banner .video::after{
+    content: "";
+    background: linear-gradient(135deg, rgb(206,27,40) 0%
+    , rgb(17,17,17) 74%);
+    opacity: 0.7 ;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: 30;
+}
+.banner .intro{
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 20px;
+    box-sizing: border-box;
+    
+}
+.banner .intro h1{
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 10vh;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.banner .intro p{
+    white-space: pre-wrap;
+    color: #888888;
+    font-size: 4vh;
+    text-align: center;
+    line-height: 1.6;
+}
+.banner .intro p span{
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.banner .intro p span:hover{
+    color: #fff;
+    transition: 0.3s;
+}
+/* END BANNER */
+
+/* START COMPONENTS */
+.comp{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    margin-top: 120px;
+    margin-bottom: 100px;
+    line-height: 1.6;
+
+}
+.comp .title{
+    /* padding-top: 120px; */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #585858;
+}
+.comp .title span{
+    font-size: 35px;
+    font-weight: 200;
+}
+.comp .title div{
+    width: 80%;
+    margin: auto;
+}
+.comp .title p{
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.comp .components{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.comp .components .squares{
+    width: 30%;
+    height: 380px;
+    margin: auto auto 50px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.comp .components .squares span i{
+    font-size: 70px;
+    color: #ce1b28;
+    cursor: pointer;
+}
+.comp .components .squares h3,
+.comp .components .squares p{
+    font-weight: 300;
+    color: #585858;
+    
+}
+/* END COMPONENTS */
+
+/* START BOARD */
+.board{
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
+    padding: 80px 100px;
+    box-sizing: border-box;
+    background-color: #ce1b28;
+    background-image: linear-gradient(rgba(206,27,40,0.2), rgba(206,27,40,0.2)), url(../images/cta01.jpg);
+    background-position: bottom;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-weight: 200;
+    line-height: 1.6;
+}
+.board span{
+    font-size: 5.2vh;
+}
+.board p{
+    font-size: 14px;
+}
+/* END BOARD */
+
+/* START EMPLOYEES */
+.employees{
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    margin: 100px 0;
+    text-align: center;
+    color: #585858
+}
+.employees .title span{
+    font-size: 35px;
+    font-weight: 200;
+}
+.employees .title div{
+    width: 80%;
+    margin: auto;
+}
+.employees .title p{
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.employees .cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.employees .cards > div{
+    width: 30%;
+    height: auto;
+    margin: auto auto 50px auto;
+    box-sizing: border-box;
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.employees .cards > div .msg{
+    box-sizing: border-box;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    border-left: 7px solid #bfbfbf;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    text-align: left;
+}
+.employees .cards > div .info{
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.employees .cards > div .info img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.employees .cards > div .info p{
+    font-size: 11px;
+    font-weight: 500;
+}
+.employees .cards > div .info p span{
+    color: #ce1b28;
+}
+/* END EMPLOYEES */
+
+/* START FOOTER */
+.footer{
+    grid-column: 1 / 4;
+    grid-row: 6 / 7;
+    padding: 120px;
+    background-color: #111111;
+}
+.footer hr{
+    height: 1px;
+    border: 0;
+    background-color: #888888;
+}
+.footer .contact{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer .contact .aboutus{
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 70px;
+}
+.footer .contact span{
+    font-size: 17px;
+    font-weight: 200;
+    color: #fff;
+}
+.footer .contact .aboutus p{
+    margin: 20px 0;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: justify;
+    color: #888888;
+}
+.footer .contact .links{
+    width: 30%;
+    box-sizing: border-box;
+    padding-right: 70px;
+}
+.footer .contact .links > div{
+    margin: 20px 0;
+}
+.footer .contact .links a{
+    text-decoration: none;
+    color: #888888;
+    font-weight: 300;
+}
+.footer .contact .links a:hover{
+    transition: 0.3s;
+    color: #ce1b28;
+}
+.footer .contact .social{
+    width: 20%;
+}
+.footer .contact .social > div{
+    margin: 20px 0;
+}
+.footer .contact .social ul{
+    list-style: none;
+    padding: 0;
+}
+.footer .contact .social li{
+    height: 40px;
+}
+.footer .contact .social li a{
+    text-decoration: none;
+    color: #888888;
+}
+.footer .contact .social li a:hover{
+    transition: 0.3s;
+    color: #ce1b28;
+}
+.footer .contact .social li a i{
+    font-size: 25px;
+    margin-right: 15px;
+}
+.footer .copyrights{
+    margin-top: 30px;
+    text-align: center;
+    color: #5f5f5f;
+    font-size: 12px;
+    font-weight: 500;
+}
+.footer .copyrights span span{
+    cursor: pointer;
+}
+.footer .copyrights span span:hover{
+    transition: 0.3s;
+    color: #ce1b28;
+}
+/* END FOOTER */
+
+/* START MENU */
+.menu{
+    width: 300px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 2000;
+    position: fixed;
+    box-sizing: border-box;
+    padding: 20px 20px 0 30px;
+    background-color: #111111;
+    color: #5f5f5f;
+    display: none;
+}
+.menu .close{
+    text-align: right;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.menu .close a{
+    font-size: 20px;
+    color: #bfbfbf;
+    text-decoration: none;
+}
+.menu ul{
+    list-style: none;
+    padding: 0;
+}
+.menu ul li{
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #bfbfbf;
+}
+.menu ul li:last-of-type{
+    border-bottom: none;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #bfbfbf;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 100%;
+}
+.menu ul li a:hover{
+    color: #fff;
+}
+/* END MENU */
+
+/* START MEDIA QUERY */
+@media (max-width: 1024px){
+    .banner .video video{
+        display: none;
+    }
+}
+@media (max-width: 768px){
+    .comp .components .squares{
+        width: 45%;
+    }
+    .employees .cards > div{
+        width: 45%;
+    }
+    .footer .contact .aboutus{
+        width: 100%;
+        padding: 0;
+    }
+    .footer .contact .links{
+        width: 50%;
+        padding: 0;
+    }
+    .footer .contact .social{
+        width: 40%;
+        margin-left: 10%;
+    }
+}
+@media (max-width: 425px){
+    .comp .components .squares{
+        width: 100%;
+    }
+    .employees .cards > div{
+        width: 100%;
+    }
+    .footer {
+        padding: 30px 20px;
+    }
+    .footer .contact .aboutus{
+        width: 100%;
+        padding: 0;
+    }
+    .footer .contact .links{
+        width: 100%;
+        padding: 0;
+    }
+    .footer .contact .social{
+        width: 100%;
+        margin: 0;
+    }
+}
+/* END MEDIA QUERY */
