@@ -1,0 +1,2 @@
+# industrious
+industrious template designed by TEMPLATED, using HTML CSS3 &amp;amp; JS "just i bit"  *** this is the demo of the original template: https://templated.co/industrious ** i learned alot coding this template so since i'm a newbie, im so happy with the output eventhough it's not the best code ever so, please if you have time, tell me how to improve my coding ways and what to learn *my E-mail: asmaarashid96@gmail.com
