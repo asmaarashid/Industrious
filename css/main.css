@@ -124,7 +124,6 @@ body{
     
 }
 .banner .intro > span{
-    margin-bottom: 0;
     color: #fff;
     font-size: 3.875rem;
     /* was 62px */
@@ -470,11 +469,20 @@ body{
     }
 }
 @media (max-width: 768px){
+    .banner .intro > span{
+        font-size: 3rem;
+    }
+    .comp .title div{
+        width: 100%;
+    }
     .comp .components .squares{
         width: 45%;
     }
     .board{
         padding: 40px 30px;
+    }
+    .employees .title div{
+        width:100%;
     }
     .employees .cards > div{
         width: 45%;
@@ -493,11 +501,17 @@ body{
     }
 }
 @media (max-width: 425px){
+    .comp .title div{
+        width: 100%;
+    }
     .comp .components .squares{
         width: 100%;
     }
     .board{
         padding: 30px 20px;
+    }
+    .employees .title div{
+        width:100%;
     }
     .employees .cards > div{
         width: 100%;
